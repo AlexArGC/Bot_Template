@@ -144,7 +144,7 @@ class UniversalTelegramClient:
                 start = {'start_param': settings.REF_ID if randint(0, 100) <= 85 and settings.REF_ID else default_val} if self.is_fist_run else {}
 
                 start_state = False
-                async for message in self.client.iter_messages('MMproBump_bot'):
+                async for message in self.client.iter_messages(bot_username):
                     if r'/start' in message.text:
                         start_state = True
                         break
@@ -239,7 +239,7 @@ class UniversalTelegramClient:
                 start = {'start_param': settings.REF_ID if randint(0, 100) <= 85 and settings.REF_ID else default_val} if self.is_fist_run else {}
 
                 start_state = False
-                async for message in self.client.get_chat_history('MMproBump_bot'):
+                async for message in self.client.get_chat_history(bot_username):
                     if r'/start' in message.text:
                         start_state = True
                         break
