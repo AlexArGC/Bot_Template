@@ -15,6 +15,10 @@ RUN pip3 install --upgrade pip setuptools wheel \
 COPY . .
 
 RUN useradd -ms /bin/bash appuser
+
+RUN chown -R appuser:appuser /app
+RUN chmod -R 755 /app
+
 USER appuser
 
 CMD ["python3", "main.py", "-a", "1"]
