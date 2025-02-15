@@ -163,9 +163,10 @@ cython_debug/
 .idea/
 
 *.session
-
 *.json
-
 proxies.txt
 
 logs/
+.debug/
+.vscode/
+.qodo/
